@@ -36,3 +36,8 @@ void PlayerBullet::Draw() {
 		);
 	}
 }
+
+void PlayerBullet::Shoot(const Vector2 &startPos) {
+	position_ = startPos;
+	isShoot_ = true;
+}

@@ -36,9 +36,8 @@ void Player::Update(char *keys, std::vector<EnemyBullet *> &enemyBullets) {
 	// 弾発射入力
 	if (keys[DIK_SPACE] && shootCoolTime_ == 0) {
 		for (PlayerBullet *bullet : bullets_) {
-			if (!bullet->isShoot_) {
-				bullet->position_ = position_;
-				bullet->isShoot_ = true;
+			if (!bullet->IsShoot()) {
+				bullet->Shoot(position_);
 				shootCoolTime_ = 10;
 				break;
 			}
