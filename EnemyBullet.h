@@ -18,11 +18,11 @@ public:
 	bool IsShoot() const { return isShoot_; }
 	Vector2 GetPosition() const { return position_; }
 	float GetRadius() const { return radius_; }
-	
+
 	// 発射フラグを下す
 	void Deactivate() { isShoot_ = false; }
 
-public:
+private:
 	Vector2 position_;
 	Vector2 velocity_;
 	float speed_;
@@ -43,7 +43,7 @@ public:
 	// 発射
 	void Shoot(const Vector2 &startPos, const Vector2 &targetPos);
 
-public:
+private:
 	// 最大数
 	static const int kMaxBullet = 64;
 	std::vector<EnemyBullet> bullets_;

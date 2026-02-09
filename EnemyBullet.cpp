@@ -59,7 +59,7 @@ EnemyBulletManager::EnemyBulletManager() {
 void EnemyBulletManager::Shoot(const Vector2 &startPos, const Vector2 &targetPos) {
 	// 各敵の弾発射
 	for (auto &bullet : bullets_) {
-		if (!bullet.isShoot_) {
+		if (!bullet.IsShoot()) {
 			bullet.Shoot(startPos, targetPos);
 			break;
 		}
