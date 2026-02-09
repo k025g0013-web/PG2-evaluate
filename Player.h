@@ -19,7 +19,7 @@ public:
 	int GetHP() const { return hp_; }
 	const std::vector<PlayerBullet *> &GetBullets() const { return bullets_; }
 
-public:
+private:
 	Vector2 position_;
 	float speed_;
 	float radius_;
