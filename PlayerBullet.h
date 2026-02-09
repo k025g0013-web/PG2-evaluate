@@ -14,10 +14,13 @@ public:
 	Vector2 GetPosition() const { return position_; }
 	float GetRadius() const { return radius_; }
 
+	// 発射
+	void Shoot(const Vector2& startPos);
+
 	// 発射フラグを下す
 	void Deactivate() { isShoot_ = false; }
 
-public:
+private:
 	Vector2 position_;
 	float speed_;
 	float radius_;
